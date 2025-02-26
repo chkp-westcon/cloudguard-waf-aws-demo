@@ -2,8 +2,7 @@
  
  This is a simple docker-compose stack for deploying a Check Point CloudGuard WAF demo environment.  
  It will deploy four containers:
-- [Check Point CloudGuard WAF (Standalone)](https://www.checkpoint.com/cloudguard/waf/)
-   - This container provides the NGINX reverse proxy and WAF agent in a single image
+
 - [OWASP Juiceshop](https://hub.docker.com/r/bkimminich/juice-shop)
   - A deliberately vulnerable application for learning about web application attacks
 - [DVWA - Damn Vulnerable Web App](https://hub.docker.com/r/vulnerables/web-dvwa)
@@ -19,15 +18,7 @@
 
 * Make sure you have Docker (or equivalent) installed and also docker-compose (included by default in most recent Docker packages)
 * Clone this repository
-* Add a file named '.env' in the same directory as the docker-compose.yml file.
-* Add the following to the file:
-```bash
-COMPOSE_PROJECT_NAME=waf-demo
-token=cp-123-123-123-123-123-123-123
-```
 
-**COMPOSE_PROJECT_NAME** will prepend the container names with your chosen string here.
-**token** is the token from your CloudGuard WAF profile.
 * Run ```docker compose up``` to launch the containers and view the logs in the foreground
 OR
 run `docker compose up -d` to launch containers but run on the background.
