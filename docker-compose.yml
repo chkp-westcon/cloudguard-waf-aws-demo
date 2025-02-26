@@ -14,9 +14,3 @@ services:
     image: erev0s/vampi
     ports:
       - '3002:5000'
-
-  cloudguard-waf:
-    image: checkpoint/cloudguard-appsec-standalone
-    entrypoint: /cloudguard-appsec-standalone --token $token --ignore-all
-    ports:
-      - '80:80'
